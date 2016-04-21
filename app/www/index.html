@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/animate.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style>
+        /*@keyframes kickflip {
+          from {
+            -webkit-transform: perspective(800px) rotate3d(1, 0, 0, -360deg);
+            transform: perspective(800px) rotate3d(1, 0, 0, -360deg);
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+          }
+
+          40% {
+            -webkit-transform: perspective(800px) translate3d(0, 0, 150px) rotate3d(1, 0, 0, -190deg);
+            transform: perspective(800px) translate3d(0, 0, 150px) rotate3d(1, 0, 0, -190deg);
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+          }
+
+          50% {
+            -webkit-transform: perspective(800px) translate3d(0, 0, 150px) rotate3d(1, 0, 0, -170deg);
+            transform: perspective(800px) translate3d(0, 0, 150px) rotate3d(1, 0, 0, -170deg);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+          }
+
+          80% {
+            -webkit-transform: perspective(800px) scale3d(.95, .95, .95);
+            transform: perspective(800px) scale3d(.95, .95, .95);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+          }
+
+          to {
+            -webkit-transform: perspective(800px);
+            transform: perspective(800px);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+          }
+        }*/
+
+/*        @keyframes kickflip {
+            0% {
+                transform: rotate(360deg);
+                animation-timing-function: ease-out;
+            }
+        }*/
+
+        @-webkit-keyframes kickflip {
+            from {
+                -webkit-transform: rotate(0deg);
+                -webkit-animation-timing-function: ease-out;
+            }
+
+            to {
+                -webkit-transform: rotate(360deg);
+                -webkit-animation-timing-function: ease-out;
+            }
+        }
+
+        .animated.kickflip {
+          -webkit-backface-visibility: visible;
+          /*backface-visibility: visible;*/
+          -webkit-animation-name: kickflip;
+          /*animation-name: kickflip;*/
+        }
+
+        </style>
+        <title>Skateboarding trick counter</title>
+    </head>
+    <body>
+        <!-- <div id="debug"></div> -->
+        <div class="app">
+            <div class="status-bar">
+                <button id="connect" data-connected="false">CONNECT</button>
+
+                <div id="status" class="blink">IDLE</div>
+                <button id="update" style="display: none">UPDATE</button>
+            </div>
+
+            <h1 id="title">Trick counter</h1>
+            
+            <!-- <div id="logo" class="animated infinite kickflip"></div> -->
+            <div id="logo" class="animated"></div>
+
+            <ul id="tricks">
+                <li><p class="animated">Kickflip</p> <span id="kickflip-count" class="count" data-count="0">0</span></li>
+                <li><p class="animated">Heelflip</p> <span id="heelflip-count" class="count" data-count="0">0</span></li>
+                <li><p class="animated">Pop shove-it</p> <span id="bs-shove-count" class="count" data-count="20">20</span></li>
+                <li><p class="animated">FS Pop shove-it</p> <span id="fs-shove-count" class="count" data-count="18">18</span></li>
+                <li><p class="animated">varial kickflip</p> <span id="varial-kickflip-count" class="count" data-count="12">12</span></li>
+                <li><p class="animated">varial heelflip</p> <span id="varial-heelflip-count" class="count" data-count="9">9</span></li>
+                <li><p class="animated">360 flip</p> <span id="360-flip-count" class="count" data-count="22">22</span></li>
+            </ul>
+        </div>
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
